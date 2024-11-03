@@ -7,7 +7,7 @@ FROM node:20-alpine
 # This is done to avoid running the app as root
 # If the app is run as root, any vulnerability in the app can be exploited to gain access to the host system
 # It's a good practice to run the app as a non-root user
-# RUN addgroup app && adduser -S -G app app
+RUN addgroup app && adduser -S -G app app
 
 # set the user to run the app
 # USER app

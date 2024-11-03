@@ -1,0 +1,10 @@
+services:
+  nginx:
+    image: nginxinc/nginx-unprivileged
+    ports:
+      - 8080:8080
+    develop:
+      watch:
+        - path: ./
+          target: /var/www/html
+          action: sync
